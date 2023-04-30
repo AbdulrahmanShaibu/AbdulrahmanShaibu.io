@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clculator</title>
+    <link rel="stylesheet" type="text/css" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js">
+</head>
+<body>
+    <div class="inputs">
+        <label>Number:1</label>
+<input type="text" id="input1" placeholder="Enter the first number"><br><br>
+<label>Number:2</label>
+<input type="text" id="input2" placeholder="Enter the second number"><br><br>
+</div>
+
+<div class="buttons">
+<button type="button" id="btn1" onclick="Add()">+</button>
+<button type="button" id="btn2" onclick="Substruct()">-</button>
+<button type="button" id="btn3" onclick="Multiply()">*</button>
+<button type="button" id="btn4" onclick="Devide()">/</button>
+<button type="button" id="btn5" onclick="Remainder()">%</button>
+<button type="button" id="result" onclick="Empty()">results</button>   
+</div>
+
+<style>
+    .buttons{
+        text-align: center;
+        padding-left: 65px;
+        background-color: grey;
+    }
+    .inputs{
+        text-align: center;
+        padding-top: 50px;
+        background-color: rgb(129, 170, 170);
+    }
+</style>
+
+<script>
+
+function Add(){
+    var number1=Number(document.querySelector('#input1').value);
+    var number2=Number(document.querySelector('#input2').value);
+    let sum=number1+number2;
+    alert(`sum ${sum}`);
+}
+function Substruct(){
+    var number1=Number(document.querySelector('#input1').value);
+    var number2=Number(document.querySelector('#input2').value);
+    let sub=number1-number2;
+    alert(`substruction ${sub}`);
+}
+function Multiply(){
+    var number1=Number(document.querySelector('#input1').value);
+    var number2=Number(document.querySelector('#input2').value);
+    let mult=number1*number2;
+    alert(`product ${mult}`);
+}
+function Devide(){
+    var number1=Number(document.querySelector('#input1').value);
+    var number2=Number(document.querySelector('#input2').value);
+    let devide=number1/number2;
+    alert(`devission ${devide}`);
+}
+function Remainder(){
+    var number1=Number(document.querySelector('#input1').value);
+    var number2=Number(document.querySelector('#input2').value);
+    let remainder=number1%number2;
+    alert(`remainder ${remainder}`);
+}
+
+function Empty(){
+    alert("button hii haina codes");
+}
+</script>
+
+</body>
+</html>

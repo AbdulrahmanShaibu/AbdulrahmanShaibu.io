@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal information</title>
+    <link rel="stylesheet" type="text/css" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+
+</head>
+<body>
+
+<center>
+<img class="iMg" id="myImage" title="image" src="C:\Users\HP\OneDrive\Desktop\Project_Questions\img.jpeg">
+<h6 id="profile">Abdulrahman</h6>
+<br>
+</center>
+<table class="table">
+	<thead>
+		<tr>
+			<strong><td>First Name</td></strong>
+			<td>Abdulrahman</td>
+		</tr>
+	</thead>
+	<tbody>
+        <tr>
+			<strong><td>Second Name</td></strong>
+			<td>Shaibu</td>
+		</tr>
+		<tr>
+			<strong><td>Last Name</td></strong>
+			<td>Kheir</td>
+		</tr>
+
+		<tr>
+			<td>Address</td>
+			<td>Mpendae</td>
+		</tr>
+
+		<tr>
+			<td>Location</td>
+			<td>Zanzibar</td>
+		</tr>
+
+		<tr>
+			<td>Gender</td>
+			<td>Male</td>
+		</tr>
+
+		<tr>
+			<td>Status</td>
+			<td>Single</td>
+		</tr>
+
+	</tbody>
+</table>
+
+
+<style>
+    .table{
+		border: solid 2px black;
+		border-collapse: collapse;
+		background-color: rgb(214, 195, 195);
+        table-layout: fixed;
+		
+
+	}
+    td{
+        border: 1px solid black;
+        font-size: large;
+        font-weight: 495;
+      }
+      td:hover{
+    background-color: white;
+      }
+      h4{
+        text-align: center;
+      }
+	  .iMg{
+		border: 2px solid rgb(34, 223, 9);
+		border-radius: 90%;
+		height: 200px;
+		width: 200px;
+	  }
+	  body{
+		background-color: rgb(191, 214, 206);
+	  }  
+</style>
+
+<script>
+
+	//iMg.style.visibility = (iMg.style.visibility == "visible") ? "hidden" : "visible";
+	function Owner(){
+		const profile=document.querySelector('#profile');
+		profile.innerHTML="The owner";
+		console.log(profile);
+        const blink=document.querySelector('#myImage');
+		myImage.style.visibility = (myImage.style.visibility == "visible") ? "hidden" : "visible";
+	}setInterval(Owner,1000)
+	
+	
+</script>
+
+</body>
+</html>
