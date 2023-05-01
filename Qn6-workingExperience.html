@@ -14,37 +14,38 @@
   <div id="paragraph1" class="p1">
     <p>
   
-        <h2>Working Experince</h2>
+        <h2>Working Experience</h2>
  
- I worked on a project to develop a web application for 
- a financial services company. 
- The project involved a team of developers, designers,
-  and product managers, and my role was to implement new features
-   and improve the overall performance of the application.
-
-One of the challenges we faced early on was that the application 
-was experiencing slow load times, particularly when users were 
-accessing it from mobile devices. After conducting some analysis,
- we realized that the root cause of the issue was that the application 
- was making too many server requests and that this was causing unnecessary delays.
-
-To solve this problem, I proposed that we use a technique 
-called server-side rendering to render the application on the server
- before it is sent to the client's browser. This would reduce the number
-  of requests the application was making and improve the overall load time.
-
-After implementing this change, we were able to significantly reduce the 
-application's load time, and our users reported a much smoother 
-and more enjoyable experience. This not only improved the user experience 
-but also led to increased user engagement and ultimately, 
-higher revenues for the company.
-
-Through this experience, I learned the importance of analyzing performance 
-metrics and using creative solutions to improve software performance.
- I also learned the value of working collaboratively with a team to 
- identify and solve problems and the impact that small changes can
-  have on the overall success of a project.
-    </p>
+        <p class="bounce">
+          I worked on a project to develop a web application for 
+          a financial services company. 
+          The project involved a team of developers, designers,
+           and product managers, and my role was to implement new features
+            and improve the overall performance of the application.
+         
+         One of the challenges we faced early on was that the application 
+         was experiencing slow load times, particularly when users were 
+         accessing it from mobile devices. After conducting some analysis,
+          we realized that the root cause of the issue was that the application 
+          was making too many server requests and that this was causing unnecessary delays.
+         
+         To solve this problem, I proposed that we use a technique 
+         called server-side rendering to render the application on the server
+          before it is sent to the client's browser. This would reduce the number
+           of requests the application was making and improve the overall load time.
+         
+         After implementing this change, we were able to significantly reduce the 
+         application's load time, and our users reported a much smoother 
+         and more enjoyable experience. This not only improved the user experience 
+         but also led to increased user engagement and ultimately, 
+         higher revenues for the company.
+         
+         Through this experience, I learned the importance of analyzing performance 
+         metrics and using creative solutions to improve software performance.
+          I also learned the value of working collaboratively with a team to 
+          identify and solve problems and the impact that small changes can
+           have on the overall success of a project. 
+      </p>
   </div>
 
     <style>
@@ -61,6 +62,22 @@ metrics and using creative solutions to improve software performance.
         color: green;
         }
         
+        @keyframes bounce {
+          from {
+            transform: translate3d(0, 0, 0);
+          }
+    
+          to {
+            transform: translate3d(0, -10px, 0);
+          }
+        }
+            .bounce {
+          animation-name: bounce;
+          animation-duration: 1s;
+          animation-iteration-count: infinite;
+          animation-direction: alternate;
+          animation-timing-function: ease-in-out;
+        }
     </style>
 </body>
 </html>

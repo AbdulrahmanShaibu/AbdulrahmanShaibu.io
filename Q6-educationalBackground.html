@@ -52,6 +52,24 @@
         color: rgb(55, 122, 199);
         background-color: rgb(233, 220, 220);
     }
+   img{
+    height: 500px;
+    width: 1000px;
+   }
+   @keyframes blink {
+    0% {
+        opacity: 0;
+    }
+
+    
+    100% {
+        opacity: 1;
+    }
+}
+
+.image {
+    animation: blink 10s linear infinite;
+}
     </style>
     
     <body>
@@ -97,7 +115,9 @@
     </tbody>
     </table>
 
-
-
+    <div class="image" >
+<img title="image" src="https://images.pexels.com/photos/256490/pexels-photo-256490.jpeg?auto=compress&cs=tinysrgb&w=600" >
+   </div>
+   
 </body>
 </html>
