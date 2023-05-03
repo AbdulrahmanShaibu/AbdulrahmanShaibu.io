@@ -5,28 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My information</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <div class="home">
+    
 
-    </div>
-    <div class="decorate" title="Welcome to our site">
-       
-    </div>
+    <div class="panel panel-success">
 
+        <div class="panel-heading"></div>
+        <div class="panel-body">
+            <button id="home" onclick="Home()">Home</button>
+        </div>
+    </div>
    
+
     <div class="container">
-        <br>
-<a href="Qn6-Personalinfo.html">
-    <label>Personal information</label>
-</a>
-      <br><br>
-       <a href="Q6-educationalBackground.html">
-        <label>Educational Background</label>
+    
+       <div class="innerDiv">
+        <a href="Qn6-Personalinfo.html">
+            <label>Personal information</label>
+        </a>
+              <br><br>
+               <a href="Q6-educationalBackground.html">
+                <label>Educational Background</label>
+               </a><br><br>
+        
+    <a href="Qn6-managing%20experience.html">
+        <label>Management Experience</label>
        </a><br><br>
+
     <a href="Qn6-workingExperience.html">
        <label>Working Experience</label>
     </a><br><br>
+
+
 <a href="Qn6-skills.html">
     <label>Skills</label>
 </a><br><br>
@@ -35,56 +49,54 @@
         <label>Projects</label>
        </a><br><br>
       
-       <a href="Qn6-managing%20experience.html">
-        <label>Management Experience</label>
-       </a><br><br>
-      
        <a href="Qn6-dependents.html">
         <label>Depenedents</label>
        </a><br><br>
       
        <a href="Qn6-contactForm.html">
-        <label>Contact Us</label><br><br> 
+        <label>Contact</label><br><br> 
        </a>
-       
+    </div>
 
     </div>
 
-
-
-    <div class="fit">
-       <!-- <img title="Our Company Located in DaresalamTanzania" src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bG9naW4lMjB3ZWIlMjBwYWdlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"> -->
-    </div>
     <style>
-       
-        .decorate{
-            background-color: rgb(156, 125, 125);
-            width: 1345px;
-            height: 30px;
-
+        button{
+        font-size:16px;
+        border-radius: 10px;
         }
-        .decorate:hover{
-            background-color: rgb(122, 85, 85);
-        }
-        .container{
+        button:hover{
             background-color: white;
-            width: 170px;
-            color: rgb(241, 245, 248);
-            display: grid;
+        }
+.panel-body{
+    border-radius: 50px;
+    background-color: rgb(64, 109, 110);
+}
+       .innerDiv{
+           display: inline-block;
+           
+       }
+       
+    
+        .container{
+           background-color: #FFFFFF;
+           display: inline-block;
            text-decoration: none;
         }
         label:hover{
             background-color: green;
-            display: block;
+            display: flex;
             padding: 10px;
+            text-decoration: none;
         }
         label{
             padding: 10px;
-            display: block;
+          display: flex;
             background-color: black;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             font-size: small;
             font-weight: 600;
+            text-decoration: none;
         }
         .fit{
             background-color: rgb(245, 245, 248);
@@ -103,7 +115,7 @@
         }
         body{
             background-color: rgb(243, 242, 245);
-            background-image: url("https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8bG9naW4lMjB3ZWIlMjBwYWdlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60");
+            background-image: url("https://images.pexels.com/photos/8532637/pexels-photo-8532637.jpeg?auto=compress&cs=tinysrgb&w=600");
 			background-repeat: no-repeat;
 			background-size: cover;
         }
@@ -124,6 +136,17 @@
                 background-color: rgb(231, 219, 222);
             }
         }
+
     </style>
+     
+    <script>
+        function Home(){
+            const ForHome=document.querySelector("#home");
+            ForHome.innerHTML="WELCOME TO MY CV";
+            alert("You are viewing Abdulrahman CV, welcome");
+        }
+       
+    </script>   
+
 </body>
 </html>
