@@ -14,56 +14,87 @@
 <img class="iMg" id="myImage" title="image" src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Ym9zc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60">
 <h6 id="profile">Abdulrahman</h6>
 <br>
+
+
+<div class="card">
+<div class="card-content">
+<p>Personal details
+	<center>
+		<table class="table">
+			<thead>
+				<tr>
+					<strong><td>First Name</td></strong>
+					<td>Abdulrahman</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<strong><td>Second Name</td></strong>
+					<td>Shaibu</td>
+				</tr>
+				<tr>
+					<strong><td>Last Name</td></strong>
+					<td>Kheir</td>
+				</tr>
+		
+				<tr>
+					<td>Address</td>
+					<td>Mpendae</td>
+				</tr>
+		
+				<tr>
+					<td>Location</td>
+					<td>Zanzibar</td>
+				</tr>
+		
+				<tr>
+					<td>Gender</td>
+					<td>Male</td>
+				</tr>
+		
+				<tr>
+					<td>Status</td>
+					<td>Single</td>
+				</tr>
+		
+			</tbody>
+		</table>
+		</center>
+</p>
+</div>
+</div>
 </center>
-<table class="table">
-	<thead>
-		<tr>
-			<strong><td>First Name</td></strong>
-			<td>Abdulrahman</td>
-		</tr>
-	</thead>
-	<tbody>
-        <tr>
-			<strong><td>Second Name</td></strong>
-			<td>Shaibu</td>
-		</tr>
-		<tr>
-			<strong><td>Last Name</td></strong>
-			<td>Kheir</td>
-		</tr>
 
-		<tr>
-			<td>Address</td>
-			<td>Mpendae</td>
-		</tr>
-
-		<tr>
-			<td>Location</td>
-			<td>Zanzibar</td>
-		</tr>
-
-		<tr>
-			<td>Gender</td>
-			<td>Male</td>
-		</tr>
-
-		<tr>
-			<td>Status</td>
-			<td>Single</td>
-		</tr>
-
-	</tbody>
-</table>
 
 
 <style>
+	.card:hover {
+		border: 1px solid #ccc;
+		border-radius: 5px;
+		padding: 20px;
+		box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+		background-color: #fff;
+		text-align: center;
+		overflow: hidden;
+		transition: 1s;
+		background-color: rgb(71, 116, 126);
+	  }
+	  .card-content {
+		text-align: left;
+	  }
+	   .card p {
+            font-size: 16px;
+            margin-bottom: 20px;
+            text-align: center;
+          }
     .table{
 		border: solid 2px black;
 		border-collapse: collapse;
 		background-color: rgb(214, 195, 195);
         table-layout: fixed;
-		
-
+		width: auto;
+		height: auto;
+		align-content: center;
 	}
     td{
         border: 1px solid black;
@@ -79,12 +110,11 @@
 	  .iMg{
 		
 		border-radius: 90%;
-		height: 200px;
-		width: 190px;
+		height: 100px;
+		width: 100px;
 	  }
-	  body{
-		background-color: rgb(191, 214, 206);
-	  }  
+	
+	  
 </style>
 
 <script>
@@ -96,7 +126,7 @@
 		console.log(profile);
         const blink=document.querySelector('#myImage');
 		myImage.style.visibility = (myImage.style.visibility == "visible") ? "hidden" : "visible";
-	}setInterval(Owner,1000)
+	}setInterval(Owner,3000)
 	
 	
 </script>

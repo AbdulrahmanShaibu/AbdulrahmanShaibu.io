@@ -38,10 +38,13 @@
 	<h3>Contact Us</h3>
 	
 	<!-- Google Maps iframe -->
-	<iframe title="google map" id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.8250447503366!2d106.68814711429154!3d10.801102292315105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528e04c1d6a9b%3A0xb33efcfc15f06b87!2zQ2jhu6NpIFbEg24gSG_DoW5nIERhIFZpZGVvLCAxNCBUw6Jt!5e0!3m2!1sen!2s!4v1650337948766!5m2!1sen!2s" frameborder="0" allowfullscreen></iframe>
+	<!-- <iframe title="google map" id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.8250447503366!2d106.68814711429154!3d10.801102292315105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528e04c1d6a9b%3A0xb33efcfc15f06b87!2zQ2jhu6NpIFbEg24gSG_DoW5nIERhIFZpZGVvLCAxNCBUw6Jt!5e0!3m2!1sen!2s!4v1650337948766!5m2!1sen!2s" frameborder="0" allowfullscreen></iframe> -->
+<div class="Mymap">
+	<iframe  src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7933.361779739265!2d39.20594103711044!3d-6.173461358592471!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2stz!4v1683186961897!5m2!1sen!2stz" width="1400" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
 	<center>
 	<!-- Contact form -->
-	<form id="contact-form">
+	<form id="contact-form" class="Theform">
 		<label for="name">Name</label>
 		<input type="text" id="name" name="name" required>
 		
@@ -49,14 +52,31 @@
 		<input type="text" id="address" name="address" required>
 		
 		<label for="email">Email</label>
-		<input type="email" id="email" name="email" required>
+		<input type="email" id="email" name="email" placeholder="entervalid@gmail.com" required>
 		
 		<label for="comments">Comments</label>
-		<textarea id="comments" name="comments" required></textarea>
+		<textarea id="comments" name="comments" required ></textarea>
 		
 		<input type="submit" value="Submit">
 	</form>
 </center>
+
+<style>
+.Theform:hover{
+	background-color: rgb(73, 117, 102);
+	transition: 8s;
+}
+input{
+	border-radius: 50px;
+	border-color: green;
+}
+input:hover{
+	background-color: rgb(185, 185, 159);
+}
+label{
+	color: white;
+}
+</style>
 	<script>
 		// Store form data in local storage on submit
 		document.getElementById("contact-form").addEventListener("submit", function(event) {
@@ -75,6 +95,7 @@
 			
 			alert("Form data has been saved!");
 			document.getElementById("contact-form").reset();
+			
 		});
 	</script>
 </body>
