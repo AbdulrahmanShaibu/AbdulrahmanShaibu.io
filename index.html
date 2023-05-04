@@ -14,7 +14,7 @@
     <div class="card text-bg-dark">
         <center>
     
-        <form action="Question%206.html">
+        <form action="Question%206.html" id="contact-form">
         <div class="col-md-2">
         <label for="validationCustom01" class="form-label">First Name</label>
         <input type="text" class="form-control" id="validationCustom01"required>
@@ -29,10 +29,10 @@
         </div>
       </div>
       <div class="col-md-2">
-        <label for="validationCustomUsername" class="form-label">Username</label>
+        <label  for="validationCustomUsername" class="form-label">Username</label>
         <div class="input-group has-validation">
           <span class="input-group-text" id="inputGroupPrepend"></span>
-          <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" placeholder="Enter Login Username" required>
+          <input id="name" name="name"  type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" placeholder="Enter Login Username" required>
           <div class="invalid-feedback">
             
           </div>
@@ -45,19 +45,21 @@
       </div>
       <div class="col-md-2">
         <label for="validationCustom04" class="form-label">State</label>
-        <select class="form-select" id="validationCustom04" required>
+        <select class="form-select" id="address" name="address" required>
             
           <option selected disabled value="">Tanzania</option>
           <option>Kenya</option>
            <option>Russia</option>
             <option>India</option>
-             <option>Malessia</option>
+             <option>United State</option>
+             <option>Indonesia</option>
+             <option>other</option>
         </select>
       <br>  
             <textarea placeholder="Enter text here..."></textarea>
     
       <div class="col-8">
-        <button class="btn btn-primary" type="submit">Login </button>
+        <button   class="btn btn-info" type="submit">Login </button>
       </div>
             </form>
         </center>
@@ -66,15 +68,33 @@
     
     
     <style>
+      button:hover{
+        border-radius: 50px;
+      }
         .post{
             background-color: lightblue;
         }
       body:hover{
-        background-color: rgb(90, 121, 87);
+        background-color: rgb(73, 117, 102);
       }
       form:hover{
-        background-color: rgb(73, 114, 69);
+        background-color: rgb(77, 97, 75);
+      }
+      input:hover{
+        border-radius: 50px;
       }
     </style>
+
+    <script>
+      alert("Welcome ,Please register from the form provided...");
+      document.querySelector("#contact-form").addEventListener("submit"), function(event) {
+        event.preventDefault();
+        let formData = {
+          name: document.querySelector("#name").value,
+          address: document.querySelector("#address").value,
+        };
+      }    
+      alert("The form has been successifully submited with"+" "+" "+formData.name); 
+    </script>
 </body>
 </html>
