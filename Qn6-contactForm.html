@@ -56,8 +56,9 @@
 		
 		<label for="comments">Comments</label>
 		<textarea id="comments" name="comments" required ></textarea>
-		
-		<input type="submit" value="Submit">
+		<!-- I am trying -->
+		<p id="submission"></p>
+		<input   onclick="UserConfirmation()" type="submit" value="Submit">
 	</form>
 </center>
 
@@ -92,8 +93,19 @@ label{
 			let storedData = JSON.parse(localStorage.getItem("contactFormData")) || [];
 			storedData.push(formData);
 			localStorage.setItem("contactFormData", JSON.stringify(storedData));
-			
-			alert("Form data has been saved!");
+
+			alert("The form has been successifully submited with"+" "+" "+formData.name
+			+" "+"in the"+" "+formData.email+" "+"account");
+			window.alert("click ok to verify that is you");
+		    
+			function UserConfirmation(){
+              if(confirm("confirm")){
+				var txt ="successifully confirmed";
+			  }else
+			  txt="cancelled";
+			  document.querySelector("#submission").innerHTML=txt;
+			}
+			//alert("Form data has been saved!");
 			document.getElementById("contact-form").reset();
 			
 		});
