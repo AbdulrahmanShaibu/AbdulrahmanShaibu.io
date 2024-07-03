@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Information</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            background-color: #f3f2f5;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .container {
+            margin-top: 30px;
+        }
+
+        .panel {
+            border-radius: 8px;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .panel-heading {
+            background-color: #5cb85c;
+            color: white;
+            font-size: 18px;
+            padding: 15px;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .panel-body {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .btn-custom {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .btn-custom:hover {
+            background-color: #0056b3;
+        }
+
+        .innerDiv {
+            margin-top: 20px;
+        }
+
+        .innerDiv a {
+            display: block;
+            margin-bottom: 15px;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+            text-align: center;
+            transition: background-color 0.3s;
+            text-decoration: none;
+        }
+
+        .innerDiv a:hover {
+            background-color: #0056b3;
+        }
+
+        .card {
+            margin-top: 30px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+
+        .card img:hover {
+            transform: scale(1.05);
+        }
+
+        .card-content h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .card-content p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .card img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="panel panel-success"
+            style="border: 2px solid #5cb85c; border-radius: 5px; padding: 20px; background-color: #dff0d8;">
+            <p style="font-family: Arial, sans-serif; font-size: 16px; line-height: 1.6; color: #3c763d;">
+                Welcome to my professional CV. My name is Abdul-rahman, and I am a dedicated Computing with 3 years of
+                experience in various industries. I have a strong background in coding, and I am passionate about
+                programming. My expertise lies in HTML, CSS, and JavaScript, and I have a proven track record of
+                [highlight a few significant achievements or contributions].
+            </p>
+            <p style="font-family: Arial, sans-serif; font-size: 16px; line-height: 1.6; color: #3c763d;">
+                I am constantly seeking opportunities to grow and improve, and I am excited about the prospect of
+                contributing to innovative projects and collaborating with like-minded professionals. Please take a
+                moment to explore my CV and learn more about my professional journey, skills, and accomplishments.
+            </p>
+            <p style="font-family: Arial, sans-serif; font-size: 16px; line-height: 1.6; color: #3c763d;">
+                Thank you for visiting, and I look forward to connecting with you.
+            </p>
+            <div class="panel-body" style="text-align: center; margin-top: 20px;">
+                <button id="home" class="btn btn-custom" onclick="Home()"
+                    style="background-color: #5cb85c; color: white; border: none; padding: 10px 20px; font-size: 16px; cursor: pointer; border-radius: 5px;">Start
+                    Here</button>
+            </div>
+        </div>
+
+
+        <div class="innerDiv">
+            <a href="Qn6-Personalinfo.html">Personal Information</a>
+            <a href="#">Educational Background</a>
+            <a href="Qn6-managing%20experience.html">Management Experience</a>
+            <a href="Qn6-workingExperience.html">Working Experience</a>
+            <a href="Qn6-skills.html">Skills</a>
+            <a href="Qn6-projectpage.html">Projects</a>
+            <a href="Qn6-dependents.html">Dependents</a>
+            <a href="Qn6-contactForm.html">Contact</a>
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <h2>Touch the photo below to get in touch with Abdulrahman</h2>
+                <p>Welcome to this page, You are viewing my personal CV.</p>
+            </div>
+            <img src="https://images.pexels.com/photos/1229861/pexels-photo-1229861.jpeg?auto=compress&cs=tinysrgb&w=600"
+                alt="Image Description">
+        </div>
+    </div>
+
+    <script>
+        function Home() {
+            const ForHome = document.querySelector("#home");
+            ForHome.innerHTML = "WELCOME TO MY CV";
+            alert("You are viewing Abdulrahman's CV, welcome!");
+        }
+    </script>
+</body>
+
+</html>

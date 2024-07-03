@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <!-- Bootstrap Bundle JS (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            background-color: #f8f9fa;
+            color: #343a40;
+            font-family: Arial, sans-serif;
+        }
+        .heading {
+            margin: 30px 0;
+            color: #3e8e41;
+            font-weight: bold;
+        }
+        .skill1, .skill2 {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .skill1 {
+            border-left: 5px solid #3e8e41;
+        }
+        .skill2 {
+            border-left: 5px solid #007bff;
+        }
+        .skill1 ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .skill1 ul li {
+            padding: 10px 0;
+            border-bottom: 1px solid #e9ecef;
+        }
+        .skill1 ul li:last-child {
+            border-bottom: none;
+        }
+        .strong-highlight {
+            color: #007bff;
+        }
+        .skill2 p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3 class="heading">About The Skills</h3>
+        <div class="skill1">
+            <ul>
+                <li>
+                    <strong>Problem-solving:</strong> The ability to analyze problems, identify potential solutions, and implement the best course of action.
+                </li>
+                <li>
+                    <strong>Technical expertise:</strong> A solid understanding of programming languages, tools, and technologies such as server-side rendering, API integration, and security protocols.
+                </li>
+                <li>
+                    <strong>Analytical skills:</strong> The ability to collect, analyze, and interpret data to make informed decisions.
+                </li>
+                <li>
+                    <strong>Flexibility and adaptability:</strong> Encountering unexpected challenges throughout the project and being required to be flexible and adaptable to changing circumstances.
+                    <br>
+                    <span class="strong-highlight">"Please Refresh to view more..."</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="skill2" id="skillsId">
+            <p>
+                Communication skills are critical in software development projects, particularly when working with a team. A software engineer needs to communicate clearly and concisely with team members, product managers, and other stakeholders to ensure that everyone is on the same page.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        const refresh = document.querySelector('#skillsId');
+        setTimeout(function() {
+            refresh.style.display = "none";
+        }, 3000);
+    </script>
+</body>
+</html>

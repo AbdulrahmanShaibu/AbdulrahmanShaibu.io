@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+
+        .heading {
+            text-align: center;
+            margin: 20px;
+        }
+
+        .heading h1 {
+            color: rgb(57, 173, 57);
+        }
+
+        .btn-custom {
+            background-color: rgb(57, 173, 57);
+            color: #fff;
+        }
+
+        .btn-custom:hover {
+            background-color: #45a045;
+        }
+
+        .project {
+            margin: 20px;
+        }
+
+        .project ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .project li {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            padding: 15px;
+            margin-bottom: 10px;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            border-radius: 8px;
+        }
+
+        .modal-content p {
+            margin: 0;
+        }
+
+        .modal-content .close {
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .modal-content .close:hover,
+        .modal-content .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+        }
+    </style>
+</head>
+<body>
+    <div class="heading">
+        <h1>Project Showcase</h1>
+        <button class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#myModal">View Projects</button>
+    </div>
+    
+    <div class="project">
+        <ul>
+            <li>
+                An e-commerce web application: API integration, and security protocols,
+                on an e-commerce web application that allows users
+                to buy and sell products online. <br>
+                A mobile application: JavaScript
+                and React Native could have been applied to a mobile application project.
+            </li>
+            <li>
+                A healthcare software solution: developing the backend and integrating APIs to
+                support data analysis and reporting, as well as ensuring the security of patient data. <br>
+                A cloud-based software application: The software
+                engineer would have been responsible for developing and deploying the
+                application to the cloud.
+            </li>
+        </ul>
+    </div>
+
+    <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="myModalLabel">Project List</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Cloud-based software application,
+                        E-commerce web application,
+                        Healthcare software solution,
+                        Mobile application development
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

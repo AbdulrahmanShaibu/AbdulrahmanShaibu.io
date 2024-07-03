@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working Experience</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            background-color: #f0f2f5;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin-top: 50px;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
+        }
+
+        .card-header {
+            background-color: #007bff;
+            color: #ffffff;
+            padding: 15px;
+            font-size: 1.5rem;
+            text-align: center;
+            border-bottom: 1px solid #0056b3;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        h2 {
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        .highlight {
+            background-color: #e9f5ff;
+            padding: 10px;
+            border-radius: 5px;
+            border-left: 5px solid #007bff;
+        }
+
+        .bounce {
+            animation-name: bounce;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-timing-function: ease-in-out;
+        }
+
+        @keyframes bounce {
+            from {
+                transform: translate3d(0, 0, 0);
+            }
+
+            to {
+                transform: translate3d(0, -10px, 0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .card-header {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header bounce">Working Experience</div>
+            <div class="card-body">
+                <p>
+                    I worked on a project to develop a web application for a financial services company. The project involved a team of developers, designers, and product managers, and my role was to implement new features and improve the overall performance of the application.
+                </p>
+                <p class="highlight">
+                    One of the challenges we faced early on was that the application was experiencing slow load times, particularly when users were accessing it from mobile devices. After conducting some analysis, we realized that the root cause of the issue was that the application was making too many server requests and that this was causing unnecessary delays.
+                </p>
+                <p>
+                    To solve this problem, I proposed that we use a technique called server-side rendering to render the application on the server before it is sent to the client's browser. This would reduce the number of requests the application was making and improve the overall load time.
+                </p>
+                <p>
+                    After implementing this change, we were able to significantly reduce the application's load time, and our users reported a much smoother and more enjoyable experience. This not only improved the user experience but also led to increased user engagement and ultimately, higher revenues for the company.
+                </p>
+                <p>
+                    Through this experience, I learned the importance of analyzing performance metrics and using creative solutions to improve software performance. I also learned the value of working collaboratively with a team to identify and solve problems and the impact that small changes can have on the overall success of a project.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
