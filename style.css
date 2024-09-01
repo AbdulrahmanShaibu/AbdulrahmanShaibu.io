@@ -105,7 +105,7 @@ nav .navigation #profile-btn {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 40px;
+    padding-top: 10px;
 }
 
 #home h2 {
@@ -794,21 +794,72 @@ footer .copyright .social .fa-linkedin-in:hover {
     /* Slightly shrink */
 }
 
+
+/* slide-show */
+#community {
+    padding: 20px;
+    text-align: center;
+}
+
+.community-para {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
 .slideshow-container {
-    max-width: 1000px;
     position: relative;
+    max-width: 1000px;
     margin: auto;
 }
 
 .mySlides {
     display: none;
-    text-align: center;
 }
 
 .profile img {
-    width: 200px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
-    margin: 20px 0;
+    margin-bottom: 10px;
+}
+
+.profile h6 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.profile p {
+    font-size: 1em;
+    color: #777;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active {
+    background-color: #717171;
 }
 
 .prev,
@@ -837,33 +888,24 @@ footer .copyright .social .fa-linkedin-in:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-.dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
+@media only screen and (max-width: 768px) {
 
-.active,
-.dot:hover {
-    background-color: #717171;
-}
-
-.fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-
-@keyframes fade {
-    from {
-        opacity: .4
+    .prev,
+    .next {
+        font-size: 12px;
+        padding: 10px;
     }
 
-    to {
-        opacity: 1
+    .profile img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .profile h6 {
+        font-size: 1em;
+    }
+
+    .profile p {
+        font-size: 0.9em;
     }
 }
