@@ -61,3 +61,19 @@ document.getElementById('sendMessageBtn').addEventListener('click', function (e)
 });
 
 
+// FAQ Toggle
+document.querySelectorAll('#faq .faq-item h3').forEach(item => {
+    item.addEventListener('click', () => {
+        const answer = item.nextElementSibling;
+        answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+    });
+});
+
+// Star Rating
+const stars = document.querySelectorAll('#rate-form .star-rating i');
+stars.forEach(star => {
+    star.addEventListener('click', () => {
+        stars.forEach(s => s.classList.remove('active'));
+        star.classList.add('active');
+    });
+});
