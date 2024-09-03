@@ -96,3 +96,135 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 50); // Adjust the speed of the counter increment here
     });
 });
+
+
+/// Function to open the payment form modal
+function openPaymentForm() {
+    const paymentFormModal = document.getElementById('paymentFormModal');
+    paymentFormModal.style.display = 'block';
+}
+
+// Function to close the payment form modal
+function closePaymentForm() {
+    const paymentFormModal = document.getElementById('paymentFormModal');
+    paymentFormModal.style.display = 'none';
+}
+
+// Function to validate the payment form fields
+function validatePaymentForm() {
+    const form = document.getElementById('paymentForm');
+
+    // Check if the form is valid
+    if (!form.checkValidity()) {
+        form.reportValidity(); // Display the validation errors
+        return false;
+    }
+
+    return true; // Form is valid
+}
+
+// Function to handle payment method change events
+document.getElementById('paymentMethod').addEventListener('change', function () {
+    const selectedMethod = this.value;
+    const cardDetails = document.getElementById('cardDetails');
+
+    // Show or hide card details based on selected payment method
+    if (selectedMethod === 'mpesa' || selectedMethod === 'tigopesa' || selectedMethod === 'halopesa') {
+        cardDetails.style.display = 'none'; // Hide card details for mobile payments
+    } else {
+        cardDetails.style.display = 'block'; // Show card details for card payments
+    }
+});
+
+// Function to validate the card number using the Luhn algorithm
+function validateCardNumber(number) {
+    let sum = 0;
+    let shouldDouble = false;
+
+    // Loop through each digit in the card number, starting from the right
+    for (let i = number.length - 1; i >= 0; i--) {
+        let digit = parseInt(number.charAt(i), 10);
+
+        if (shouldDouble) {
+            digit *= 2;
+            if (digit > 9) digit -= 9; // Subtract 9 from double digits
+        }
+
+        sum += digit;
+        shouldDouble = !shouldDouble; // Toggle doubling for the next digit
+    }
+
+    return (sum % 10) === 0; // Return true if the sum is divisible by 10
+}
+
+// Function to validate and process the payment
+function processPayment() {
+    const cardNumber = document.getElementById('cardNumber').value;
+    const isValidCard = validateCardNumber(cardNumber);
+
+    if (!isValidCard) {
+        alert('Invalid card number. Please check and try again.');
+        return;
+    }
+
+    // Simulate payment processing
+    showProcessingIndicator();
+
+    // Simulating a payment processing delay (e.g., calling an API)
+    setTimeout(() => {
+        // Assuming payment is successful
+        hideProcessingIndicator();
+        alert('Payment successful! Thank you for your purchase.');
+
+        // Trigger the book download
+        downloadBook();
+
+        // Close the payment form
+        closePaymentForm();
+    }, 3000); // Simulated delay of 3 seconds
+}
+
+// Function to show a processing indicator during payment
+function showProcessingIndicator() {
+    const processingIndicator = document.createElement('div');
+    processingIndicator.id = 'processingIndicator';
+    processingIndicator.textContent = 'Processing payment, please wait...';
+    processingIndicator.style.cssText = `
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 20px;
+        border-radius: 10px;
+        font-size: 18px;
+        z-index: 1000;
+    `;
+    document.body.appendChild(processingIndicator);
+}
+
+// Function to hide the processing indicator after payment
+function hideProcessingIndicator() {
+    const processingIndicator = document.getElementById('processingIndicator');
+    if (processingIndicator) {
+        processingIndicator.remove();
+    }
+}
+
+// Function to trigger the book download
+function downloadBook() {
+    const downloadLink = document.createElement('a');
+    downloadLink.href = 'path/to/book.pdf'; // Replace with the actual book file path
+    downloadLink.download = 'Book Title.pdf'; // Replace with the actual book title
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+    document.body.removeChild(downloadLink);
+}
+
+// Function to handle the form submission
+document.getElementById('paymentForm').addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent the form from submitting the traditional way
+    processPayment(); // Call the processPayment function
+});
+
