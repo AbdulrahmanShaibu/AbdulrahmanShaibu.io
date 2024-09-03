@@ -1023,3 +1023,98 @@ footer .copyright .social .fa-linkedin-in:hover {
 #rate-form button:hover {
     background: #0056b3;
 }
+
+/* Counts Section Styles */
+#counts {
+    padding: 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.counts-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.count-box {
+    flex: 1 1 200px;
+    margin: 20px;
+}
+
+.count {
+    font-size: 48px;
+    color: #2c3e50;
+}
+
+.count+p {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #7f8c8d;
+}
+
+/* Evidence Section Styles */
+#evidence {
+    padding: 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.evidence-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.evidence-box {
+    flex: 1 1 300px;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.evidence-box p {
+    font-size: 16px;
+    color: #34495e;
+}
+
+.evidence-box h6 {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #7f8c8d;
+}
+
+/* Recent Posts Section Styles */
+#recent-posts {
+    padding: 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.posts-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.post-box {
+    width: 80%;
+    margin: 10px 0;
+    padding: 15px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.post-box h4 {
+    font-size: 20px;
+    color: #2c3e50;
+}
+
+.post-box p {
+    font-size: 14px;
+    color: #7f8c8d;
+}

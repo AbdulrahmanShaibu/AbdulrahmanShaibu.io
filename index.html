@@ -120,7 +120,7 @@
 
   <!-- Features -->
   <section id="features">
-    <h1>Why Luminous English Class Stands Out</h1>
+    <h2>Why Luminous English Class Stands Out</h2>
     <p>We provide unparalleled English language education meticulously crafted to elevate your linguistic capabilities
       and empower your academic and professional achievements.</p>
     <div class="feature-base">
@@ -155,7 +155,7 @@
   <!-- Courses -->
   <!-- Courses -->
   <section id="course">
-    <h1>Our Courses</h1>
+    <h2>Our Courses</h2>
     <p>Explore our comprehensive range of expertly designed courses to elevate your English language skills.</p>
     <div class="course-box">
 
@@ -603,6 +603,71 @@
       </p>
     </div>
 
+    <!-- Counts Section -->
+    <section id="counts">
+      <div class="counts-container">
+        <div class="count-box">
+          <span class="count" id="counter" data-target="320">0</span>
+          <p>Happy Students</p>
+        </div>
+        <div class="count-box">
+          <span class="count" id="counter" data-target="320">0</span>
+          <p>Completed Courses</p>
+        </div>
+        <div class="count-box">
+          <span class="count" id="counter" data-target="320">0</span>
+          <p>Experienced Teachers</p>
+        </div>
+        <div class="count-box">
+          <span class="count" id="counter" data-target="85">0</span>
+          <p>Positive Reviews</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Evidence Section -->
+    <section id="evidence">
+      <h2>What Our Students Say</h2>
+      <div class="evidence-container">
+        <div class="evidence-box">
+          <p>"Luminous English Class helped me achieve fluency in English! The teachers are outstanding."</p>
+          <h6>- Sarah, Former Student</h6>
+        </div>
+        <div class="evidence-box">
+          <p>"The course material is top-notch and the teaching methods are very effective."</p>
+          <h6>- John, Current Student</h6>
+        </div>
+        <div class="evidence-box">
+          <p>"I highly recommend Luminous English Class to anyone looking to improve their English skills."</p>
+          <h6>- Aisha, Graduate</h6>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recent Posts Section -->
+    <section id="recent-posts">
+      <h2>Recent Posts</h2>
+      <div class="posts-container">
+        <div class="post-box">
+          <a href="https://news.bharatkasankalp.com/essential-of-english-grammar/">
+            <h4>Mastering English Grammar: Tips and Tricks</h4>
+          </a>
+          <p>Posted on September 2, 2024</p>
+        </div>
+        <div class="post-box">
+          <a href="https://www.oxfordinternationalenglish.com/common-english-grammar-mistakes/">
+            <h4>10 Common Mistakes in English and How to Avoid Them</h4>
+          </a>
+          <p>Posted 25 minutes ago</p>
+        </div>
+        <div class="post-box">
+          <a href="https://www.youtube.com/watch?v=MdUkC7Vz3rg">
+            <h4>How to Improve Your English Speaking Skills</h4>
+          </a>
+          <p>Posted yesterday</p>
+        </div>
+      </div>
+    </section>
 
     <!-- Reviews Section -->
     <section id="reviews">
@@ -718,12 +783,22 @@
         <button type="submit">Submit</button>
       </form>
     </section>
+  </section>
 
-  </section> <!-- Google Map -->
-  <section id="map">
-    <h2 style="text-align: center;">Find Us</h2>
-    <div class="map" id="map"></div>
-  </section> <!-- Contact Us -->
+
+  <!-- Google Map -->
+  <!-- <section style="padding: 50px 0; background-color: #f9f9f9;">
+    <h2
+      style="text-align: center; font-size: 2rem; color: #333; margin-bottom: 30px; font-family: 'Arial', sans-serif;">
+      Find Us
+    </h2>
+    <div style="display: flex; justify-content: center; align-items: center; margin: 0 auto; max-width: 600px;">
+      <img src="images/Images/map.PNG" alt="Google Map of Our Location"
+        style="border-radius: 10px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); max-width: 100%; height: auto; border: 1px solid #ddd;">
+    </div>
+  </section> -->
+
+
   <!-- Contact us -->
   <section id="contact">
     <h2>Contact Us</h2>
@@ -733,7 +808,9 @@
 
       <div class="icons">
         <i class="fas fa-phone"></i>
-        <span>+255 718 855 317</span>
+        <span>+255 772 328 783</span>
+        <span>+255 675 704 982</span>
+        <span>+255 655 468 483</span>
       </div>
 
       <div class="icons">
@@ -835,9 +912,9 @@
       slides[slideIndex - 1].style.display = "block"; dots[slideIndex - 1].className += " active";
     }
 
-    // google map
+    // google map -6.1756752200502705, 39.210244005317094
     function initMap() {
-      const location = { lat: -25.363, lng: 131.044 };
+      const location = { lat: -6.1756752200502705, lng: 39.210244005317094 };
       const map = new google.maps.Map(document.getElementById("map"),
         { zoom: 4, center: location, }
       );

@@ -58,6 +58,7 @@ document.getElementById('sendMessageBtn').addEventListener('click', function (e)
         }, function (error) {
             alert("Please have direct contact with Luminous English Class.");
         });
+
 });
 
 
@@ -75,5 +76,23 @@ stars.forEach(star => {
     star.addEventListener('click', () => {
         stars.forEach(s => s.classList.remove('active'));
         star.classList.add('active');
+    });
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const counters = document.querySelectorAll('.count');
+
+    counters.forEach(counterElement => {
+        const randomNumber = Math.floor(Math.random() * 100) + 1;
+        let currentCount = 0;
+        const interval = setInterval(() => {
+            if (currentCount < randomNumber) {
+                currentCount++;
+                counterElement.textContent = currentCount + "+";
+            } else {
+                clearInterval(interval);
+            }
+        }, 50); // Adjust the speed of the counter increment here
     });
 });
