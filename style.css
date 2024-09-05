@@ -1027,7 +1027,7 @@ footer .copyright .social .fa-linkedin-in:hover {
 /* Counts Section Styles */
 #counts {
     padding: 20px;
-    background-color: #f4f4f4;
+    background-color: #ffffff;
     text-align: center;
 }
 
@@ -1044,7 +1044,7 @@ footer .copyright .social .fa-linkedin-in:hover {
 
 .count {
     font-size: 48px;
-    color: #2c3e50;
+    color: blue;
 }
 
 .count+p {
